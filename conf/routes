@@ -4,6 +4,14 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
+
+GET     /personas                            controllers.HomeController.verPersonas
+
+
+# Agregar persona
+GET    /crear_persona               controllers.HomeController.crear
+POST   /guardar_persona             controllers.HomeController.guardarPersona
+
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
