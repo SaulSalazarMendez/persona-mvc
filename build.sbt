@@ -9,5 +9,7 @@ scalaVersion := "2.11.7"
 libraryDependencies ++= Seq(
   javaJdbc,
   cache,
-  javaWs
+  javaWs,
+  "org.avaje" % "ebean" % "2.7.3",
+  "javax.persistence" % "persistence-api" % "1.0.2"
 )
