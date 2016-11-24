@@ -54,4 +54,17 @@ public class HomeController extends Controller {
       return redirect(routes.HomeController.verPersonas());
     }
 
+    public Result editarPersona(Long id){
+      Persona persona = Persona.find.byId(id);
+      return ok(views.html.editar.render(persona));
+    }
+
+    public Result guardarEditarPersona(){
+      Persona epersona = Form.form(Persona.class).bindFromRequest().get();
+      Persona persona =  Persona.find.byId(epersona.id);
+      persona.nombre = epersona.nombre;
+      persona.save();
+      return redirect(routes.HomeController.verPersonas());
+    }
+
 }

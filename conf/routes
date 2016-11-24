@@ -7,10 +7,14 @@ GET     /                           controllers.HomeController.index
 
 GET     /personas                            controllers.HomeController.verPersonas
 
-
 # Agregar persona
 GET    /crear_persona               controllers.HomeController.crear
 POST   /guardar_persona             controllers.HomeController.guardarPersona
+
+
+#editar
+GET   /editar_persona/:id           controllers.HomeController.editarPersona(id:Long)
+POST  /guardar_editar               controllers.HomeController.guardarEditarPersona()
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
